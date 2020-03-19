@@ -18,7 +18,7 @@ Maeve escapes a persecutor.
 Charlotte pitches a business idea.
 Ford's ghost appears.
 Caleb takes a gig.
-A robot animal appears (dog, elephant, etc.).
+There's a four-legged animal (dog, elephant, horse, buffalo, etc.).
 Same scene plays out more than once.
 A host has a glitch.
 "That doesn't look like anything to me".
@@ -50,3 +50,26 @@ More than 100 hosts are shown in a single scene.
 A staff or cast member from Game of Thrones makes a cameo.
 A celebrity (not main-cast) makes a cameo.
 Jon Nolan or Lisa Joy make a cameo.
+The identity of one of the mystery hosts Dolores brought along is revealed.
+A faceless drone makes an appearance.
+New gadget is introduced (such as the tool Ash used to prevent being tracked or the augmented reality glasses).
+A host drives a car or flying vehicle.
+A character references the special value of the Delos corporation.
+A character drinks coffee.
+A host makes a joke.
+A human or host questions if a host is lying.
+Someone takes an implant (limbic sedative).
+There's fire.
+There's opera.
+A host talks about the "books".
+There's a callback to another sci-fi show: "I'm afraid I can't do that".
+There's a slow-mo aerial cinematic shot (a la Bladerunner).
+There's a scene in an elevator.
+A host cornerstone is referenced.
+Stubbs makes an appearance.
+There's a hologram phone call.
+The man in black (William) does something business related.
+Reverie's are mentioned or the song Reverie by Debussy is played.
+Maeve denies being controlled.
+Someone tries to "break out of their loop" (such as Felix wanting to be something besides a butcher).
+There's a bird.
