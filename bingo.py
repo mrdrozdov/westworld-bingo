@@ -82,8 +82,9 @@ class Board(object):
         print('')
 
     def score(self):
+        free_ids = [x[0] * self.w + x[1] for x in self.free]
         checked_str = [
-            1 if self.linear_grid[i] in self.chosen_o or i == self.h * self.w // 2 else 0
+            1 if self.linear_grid[i] in self.chosen_o or i in free_ids else 0
             for i in range(self.h * self.w)
         ]
         found = []
