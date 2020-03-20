@@ -3,6 +3,14 @@ import os
 import random
 import hashlib
 
+from valid_templates import TEMPLATES
+
+def temp2list(template):
+    return [1 if letter == "X" else 0 for row in template for letter in row]
+
+def check(marked, template):
+    template_marked = [x - y for x, y in zip(marked, template)]
+    return min(template_marked) == 0
 
 class Board(object):
     TOKEN_FREE = 'ⓦ '
@@ -32,7 +40,7 @@ class Board(object):
     def add(self, chosen_o):
         self.chosen_o = chosen_o
 
-    def print(self):
+    def make_grid(self):
         o = self.o[:]
         if self.permutation is not None:
             # TODO: Change order.
@@ -50,7 +58,10 @@ class Board(object):
         assert len(o) == n
 
         random.shuffle(o)
+        self.linear_grid = o
 
+    def print(self):
+        o = self.linear_grid
         for i in range(self.h):
             found = []
             row = []
@@ -70,8 +81,18 @@ class Board(object):
 
         print('')
 
-
-
+    def score(self):
+        checked_str = [
+            1 if self.linear_grid[i] in self.chosen_o or i == self.h * self.w // 2 else 0
+            for i in range(self.h * self.w)
+        ]
+        found = []
+        for temp_name, template in TEMPLATES.items():
+            temp_list = temp2list(template)
+            if check(checked_str, temp_list):
+                found.append(temp_name)
+        found.sort()
+        return found
 
 def main():
     parser = argparse.ArgumentParser()
@@ -103,7 +124,13 @@ def main():
         board = Board(global_o)
         board.read(path)
         board.add(chosen_o)
+        board.make_grid()
         board.print()
+        found = board.score()
+        if len(found) > 0:
+            print("Score = {:d} (You found {})\n".format(len(found), ", ".join(found)))
+        else:
+            print("Score = 0 (You got lost in the maze!)\n")
 
 
 if __name__ == '__main__':
