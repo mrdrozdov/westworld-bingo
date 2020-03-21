@@ -1,8 +1,9 @@
 import argparse
 import collections
 import os
-import random
 import hashlib
+
+import numpy as np
 
 
 def safe_iterator(f):
@@ -121,13 +122,13 @@ class Board(object):
         assert self.linear_grid is None
         # Select player options.
         o = self.o[:]
-        random.shuffle(o)
+        np.random.shuffle(o)
         o = o[:self.board_n]
 
         # Select random options.
         n = self.h * self.w
         missing = n - len(o)
-        new_o = random.sample(range(len(self.global_o)), missing + len(o))
+        new_o = np.random.choice(range(len(self.global_o)), missing + len(o))
         for i in new_o:
             if len(o) == n:
                 break
@@ -136,7 +137,7 @@ class Board(object):
 
         assert len(o) == n
 
-        random.shuffle(o)
+        np.random.shuffle(o)
         self.linear_grid = o
 
     def tostring(self):
@@ -211,7 +212,7 @@ def main():
             continue
         name = os.path.basename(path).split('.')[0]
         local_seed = int(hashlib.sha1(name.encode()).hexdigest(), 16) % (10 ** 6)
-        random.seed(options.seed + local_seed)
+        np.random.seed(options.seed + local_seed)
         path = os.path.join(options.players, path)
         board = Board(global_o, player_n=options.player_n, board_n=options.board_n)
         board.read(path)
