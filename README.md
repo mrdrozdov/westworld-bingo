@@ -36,7 +36,7 @@ caleb (918878)
 |  15 |  10 |  36 |  29 |  16 |
 |  22 |  24 |  ⓦ  |   9 |  11 |
 |  30 |  25 |  31 |  23 |  65 |
-|  35 |  14 |  21 |  17 |  12 |
+|  35 |  14 |  21 |   8 |  12 |
 
 charlotte (421870)
 |   3 |  49 |  12 |  36 |   2 |
@@ -46,10 +46,10 @@ charlotte (421870)
 |   1 |  25 |  37 |  65 |  24 |
 
 dolores (908824)
-|  31 |  62 |  32 |  35 |  21 |
-|  65 |   8 |   1 |  64 |  23 |
-|  58 |  13 |  ⓦ  |   7 |   9 |
-|   6 |  33 |  39 |  12 |  24 |
+|  65 |  64 |  32 |  35 |  21 |
+|  43 |  39 |   1 |  12 |  13 |
+|  19 |  58 |  ⓦ  |   7 |   9 |
+|   6 |  33 |  62 |  15 |  24 |
 |   2 |   5 |   3 |   4 |  25 |
 ```
 
@@ -61,24 +61,24 @@ python bingo.py --seed 150
 seed: 150
 
 caleb (918878)
-|  17 |  25 |  13 |  15 |  51 |
+|  17 |  25 |  13 |  15 |  56 |
 |  16 |   0 |  24 |  69 |  64 |
 |  31 |  33 |  ⓦ  |  43 |  38 |
 |  35 |  23 |  19 |  34 |  73 |
-|  32 |  11 |  39 |  14 |   8 |
+|  32 |  11 |  39 |  14 |  51 |
 
 charlotte (421870)
-|  37 |  13 |  32 |  35 |  25 |
-|  24 |   0 |  34 |  28 |  23 |
+|  11 |  13 |  32 |  35 |  25 |
+|  24 |   0 |  16 |  58 |  23 |
 |  31 |   9 |  ⓦ  |   8 |   5 |
-|  33 |  58 |  27 |  22 |  62 |
-|   7 |   6 |  16 |  69 |  38 |
+|  33 |  62 |  27 |  22 |  37 |
+|   7 |   6 |  38 |  28 |  69 |
 
 dolores (908824)
-|   7 |   4 |  65 |   8 |  36 |
-|   5 |  64 |   1 |   0 |  70 |
+|   7 |   4 |  65 |   8 |  38 |
+|   5 |  70 |  36 |   0 |  63 |
 |  35 |  44 |  ⓦ  |  23 |  33 |
-|  34 |  38 |   3 |  32 |   2 |
+|  34 |  64 |   3 |  32 |   2 |
 |  69 |  62 |  24 |  31 |   6 |
 ```
 
@@ -101,6 +101,7 @@ Found:
  14. Bernard resentfully fights someone.
  17. Charlotte pitches a business idea.
  19. Caleb takes a gig.
+ 20. There's a four-legged animal (dog, elephant, horse, buffalo, etc.).
  21. Same scene plays out more than once.
  24. A human finds out another human is actually a host.
  27. A character has a fast wardrobe change.
@@ -129,7 +130,7 @@ caleb (918878)
 |  15 |   X |   X |   X |  16 | Found: 10 36 29
 |  22 |   X |  ⓦ  |   9 |   X | Found: 24 11
 |   X |  25 |  31 |  23 |   X | Found: 30 65
-|  35 |   X |   X |   X |   X | Found: 14 21 17 12
+|  35 |   X |   X |   8 |   X | Found: 14 21 12
 
 Score = 0, You got lost in the maze!
 
@@ -143,10 +144,10 @@ charlotte (421870)
 Score = 0, You got lost in the maze!
 
 dolores (908824)
-|  31 |   X |  32 |  35 |   X | Found: 62 21
-|   X |   8 |   1 |   X |  23 | Found: 65 64
-|   X |   X |  ⓦ  |   X |   9 | Found: 58 13 7
-|   6 |   X |  39 |   X |   X | Found: 33 12 24
+|   X |   X |  32 |  35 |   X | Found: 65 64 21
+|  43 |  39 |   1 |   X |   X | Found: 12 13
+|   X |   X |  ⓦ  |   X |   9 | Found: 19 58 7
+|   6 |   X |   X |  15 |   X | Found: 33 62 24
 |   X |   5 |   X |   4 |  25 | Found: 2 3
 
 Score = 5, Found = ['ne_sw_diagonal']

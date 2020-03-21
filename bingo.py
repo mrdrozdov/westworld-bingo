@@ -131,7 +131,7 @@ class Board(object):
         for i in new_o:
             if len(o) == n:
                 break
-            if i not in o:
+            if i not in self.o:
                 o.append(i)
 
         assert len(o) == n
