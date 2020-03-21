@@ -2,16 +2,24 @@
 
 ## Rules
 
-1. Choose 20 "options" from the pool. Options are equivalent to squares on the bingo board.
-2. Every episode, 15 of your options will be randomly chosen, and 9 options from the remaining pool will be chosen.
-3. These 24 options will be shuffled to build your board. The center is free.
-4. Throughout the episode, call out "options" as they occur in the show.
-5. The winner is the one with the most points! Ties are broken by who had that number of points first. Harder ties will look at the history of points.
-6. Games are decided by the end of the episode! If no one calls out an option, then it is ignored. To provide some leniency, we give 24h to add anything missed, but points earned this way are only worth half. Note: We may revisit this rule if it's too strict.
-7. Points are awarded in the order they are called out. Not necessarily in the order it appears in the episode.
-8. If you call out an option, and it is later refuted, you receive -1 point.
-9. Point distribution: Each completion is worth 5 points. Unlike regular bingo which stops when there is a winner, we keep playing and continue to accumulate points. A pattern can be claimed by more than one player. We consider these 8 patterns: https://i.pinimg.com/564x/f0/24/7d/f0247d6dd31023b9aa7f00c75c6a1834.jpg
-10. Based on difficulty of the game, we may decide to give players more than one board, and to increase/decrease the available patterns. Any decision like this will be made before the episode start.
+It's like Bingo except you accumulate your points. Simple!
+
+*How is your board created?* Each player chooses 20 possible squares. Each time you play, your board will be randomly generated using this list (15 from your pool and 9 from the rest will be chosen). The middle square is always free.
+
+*How do we handle ties?* If there's a tie, the person with the most squares filled wins. Otherwise, the person who earned the most squares earliest wins.
+
+*Which patterns are concerned?* Use the 8 patterns from here: https://i.pinimg.com/564x/f0/24/7d/f0247d6dd31023b9aa7f00c75c6a1834.jpg
+
+1. Full Row
+2. Full Column
+3. Diagonal
+4. Poststamp (four in the top right corner)
+5. Outside Four Corners
+6. Inside Four Corners
+7. Outside Diamond
+8. Inside Diamond
+
+Each is worth 5 points.
 
 
 ## Creating boards.

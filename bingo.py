@@ -207,6 +207,8 @@ def main():
 
     player_info = collections.OrderedDict()
     for path in sorted(os.listdir(options.players)):
+        if path.startswith('.'):
+            continue
         name = os.path.basename(path).split('.')[0]
         local_seed = int(hashlib.sha1(name.encode()).hexdigest(), 16) % (10 ** 6)
         random.seed(options.seed + local_seed)
