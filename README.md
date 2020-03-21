@@ -19,65 +19,65 @@
 Creates random bingo boards.
 
 ```
-$ python bingo.py --players ./players --options options.txt --seed 149 --chosen ./empty.txt
+$ python bingo.py --seed 149
 
 seed: 149
 
-./players/dolores.txt (448179)
-|  17 |   7 |  23 |  21 |   9 |
-|  14 |  12 |   4 |   6 |  20 |
-|   0 |  10 |  ⓦ  |  18 |  33 |
-|   2 |  24 |  29 |   1 |  16 |
-|   3 |   8 |   5 |  31 |  11 |
+caleb (918878)
+|  52 |  34 |  66 |   2 |  13 |
+|  15 |  10 |  36 |  29 |  16 |
+|  22 |  24 |  ⓦ  |   9 |  11 |
+|  30 |  25 |  31 |  23 |  65 |
+|  35 |  14 |  21 |  17 |  12 |
 
-./players/charlotte.txt (443434)
-|   7 |   4 |  18 |  14 |   8 |
-|  13 |  23 |  29 |  32 |   3 |
-|  22 |  21 |  ⓦ  |   6 |  15 |
-|   1 |  31 |  33 |  16 |   9 |
-|   5 |  28 |   2 |  12 |  20 |
+charlotte (421870)
+|   3 |  49 |  12 |  36 |   2 |
+|   9 |  54 |  21 |   0 |  42 |
+|  30 |  50 |  ⓦ  |  63 |  35 |
+|  32 |  22 |  31 |   8 |   4 |
+|   1 |  25 |  37 |  65 |  24 |
 
-./players/caleb.txt (970437)
-|  15 |  23 |  18 |   2 |   8 |
-|   7 |  14 |  24 |   5 |   1 |
-|  12 |  19 |  ⓦ  |  13 |  26 |
-|  30 |  33 |  16 |  11 |  28 |
-|  17 |   4 |  31 |  10 |  27 |
+dolores (908824)
+|  31 |  62 |  32 |  35 |  21 |
+|  65 |   8 |   1 |  64 |  23 |
+|  58 |  13 |  ⓦ  |   7 |   9 |
+|   6 |  33 |  39 |  12 |  24 |
+|   2 |   5 |   3 |   4 |  25 |
 ```
 
 Change the seed for new boards.
 
 ```
-python bingo.py --players ./players --options options.txt --seed 150 --chosen ./empty.txt
+python bingo.py --seed 150
 
 seed: 150
 
-./players/dolores.txt (448179)
-|  33 |  28 |   8 |   1 |  17 |
-|  19 |   3 |  27 |  26 |   2 |
-|   9 |  13 |  ⓦ  |   7 |  16 |
-|  15 |   4 |  21 |   6 |   0 |
-|   5 |  22 |  20 |  29 |  23 |
+caleb (918878)
+|  17 |  25 |  13 |  15 |  51 |
+|  16 |   0 |  24 |  69 |  64 |
+|  31 |  33 |  ⓦ  |  43 |  38 |
+|  35 |  23 |  19 |  34 |  73 |
+|  32 |  11 |  39 |  14 |   8 |
 
-./players/charlotte.txt (443434)
-|   8 |  10 |  15 |  18 |   2 |
-|  12 |  32 |  11 |  29 |   5 |
-|  20 |   6 |  ⓦ  |  19 |  33 |
-|   9 |  23 |   3 |   1 |  16 |
-|   7 |  14 |  22 |   0 |  30 |
+charlotte (421870)
+|  37 |  13 |  32 |  35 |  25 |
+|  24 |   0 |  34 |  28 |  23 |
+|  31 |   9 |  ⓦ  |   8 |   5 |
+|  33 |  58 |  27 |  22 |  62 |
+|   7 |   6 |  16 |  69 |  38 |
 
-./players/caleb.txt (970437)
-|  10 |  27 |  20 |  23 |   2 |
-|  13 |  28 |  14 |  17 |  29 |
-|   0 |  12 |  ⓦ  |   3 |  32 |
-|  15 |   8 |  25 |  26 |  21 |
-|  16 |   5 |  31 |  19 |  18 |
+dolores (908824)
+|   7 |   4 |  65 |   8 |  36 |
+|   5 |  64 |   1 |   0 |  70 |
+|  35 |  44 |  ⓦ  |  23 |  33 |
+|  34 |  38 |   3 |  32 |   2 |
+|  69 |  62 |  24 |  31 |   6 |
 ```
 
-Fill out boards by changing the chosen flag.
+Score boards by changing the chosen flag.
 
 ```
-$ python bingo.py --players ./players --options options.txt --seed 149 --chosen ./chosen/ep1.txt
+$ python bingo.py --seed 149 --chosen ./chosen/ep1.txt
 
 seed: 149
 
