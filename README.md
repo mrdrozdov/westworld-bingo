@@ -99,11 +99,13 @@ Found:
  28. A character is seen in more than 3 outfits in one episode.
  29. Someone swims.
  30. A religious reference is made by a character (e.g. comparing hosts to higher beings).
+ 33. Code appears on screen.
  36. Scene from Park 3: Warworld.
  44. Francis's voice is heard.
  54. New gadget is introduced (such as the tool Ash used to prevent being tracked or the augmented reality glasses).
  55. A host drives a car or flying vehicle.
  56. A character references the special value of the Delos corporation.
+ 58. A host makes a joke.
  59. A human or host questions if a host is lying.
  60. Someone takes an implant (limbic sedative).
  61. There's fire.
@@ -111,10 +113,11 @@ Found:
  63. A host talks about the "books".
  64. There's a callback to another sci-fi show: "I'm afraid I can't do that".
  65. There's a slow-mo aerial cinematic shot (a la Bladerunner).
+ 66. There's a scene in an elevator.
  69. There's a hologram phone call.
 
 caleb (918878)
-|  52 |  34 |  66 |   X |   X | Found: 2 13
+|  52 |  34 |   X |   X |   X | Found: 66 2 13
 |  15 |   X |   X |   X |  16 | Found: 10 36 29
 |  22 |   X |  ⓦ  |   9 |   X | Found: 24 11
 |   X |  25 |  31 |  23 |   X | Found: 30 65
@@ -134,9 +137,9 @@ Score = 0, You got lost in the maze!
 dolores (908824)
 |  31 |   X |  32 |  35 |   X | Found: 62 21
 |   X |   8 |   1 |   X |  23 | Found: 65 64
-|  58 |   X |  ⓦ  |   X |   9 | Found: 13 7
-|   6 |  33 |  39 |   X |   X | Found: 12 24
+|   X |   X |  ⓦ  |   X |   9 | Found: 58 13 7
+|   6 |   X |  39 |   X |   X | Found: 33 12 24
 |   X |   5 |   X |   4 |  25 | Found: 2 3
 
-Score = 0, You got lost in the maze!
+Score = 5, Found = ['ne_sw_diagonal']
 ```

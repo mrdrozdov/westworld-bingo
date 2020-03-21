@@ -31,7 +31,7 @@ YES Someone swims. # Dolores.
 YES A religious reference is made by a character (e.g. comparing hosts to higher beings). # Dolores regarding angry gods.
 ? A non-fiction historical reference is made by a character (e.g. discussing a past war).
 ? A literary reference is made by a character (e.g. quoting shakespeare).
-? Code appears on screen.
+YES Code appears on screen. # Bernard talking to Bernard.
 ? Scene from Park 1: Westworld.
 ? Scene from Park 2: Shogunworld.
 YES Scene from Park 3: Warworld. # Maeve scene.
@@ -56,7 +56,7 @@ YES New gadget is introduced (such as the tool Ash used to prevent being tracked
 YES A host drives a car or flying vehicle. # Dolores.
 YES A character references the special value of the Delos corporation. # Charlotte.
 ? A character drinks coffee.
-? A host makes a joke.
+YES A host makes a joke. # Charlotte: Robots don't kill people, people kill people.
 YES A human or host questions if a host is lying. # Bernard to himself.
 YES Someone takes an implant (limbic sedative).
 YES There's fire. # Jerry's house.
@@ -64,7 +64,7 @@ YES There's opera. # Jerry's house.
 YES A host talks about the "books". # Dolores
 YES There's a callback to another sci-fi show: "I'm afraid I can't do that". # Jerry's house
 YES There's a slow-mo aerial cinematic shot (a la Bladerunner).
-? There's a scene in an elevator.
+YES There's a scene in an elevator. # Caleb at work.
 ? A host cornerstone is referenced.
 NO Stubbs makes an appearance.
 YES There's a hologram phone call. # Charlotte.
