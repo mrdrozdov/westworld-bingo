@@ -93,7 +93,7 @@ class Board(object):
     TOKEN_FREE = 'ⓦ '
     TOKEN_CHOSEN = 'X'
 
-    def __init__(self, global_o, player_n=None, board_n=None):
+    def __init__(self, global_o, player_n=None, board_n=None, shuffle=False):
         self.h = 5
         self.w = 5
         self.player_n = player_n
@@ -103,6 +103,7 @@ class Board(object):
         self.chosen_o = None
         self.global_o = global_o
         self.linear_grid = None
+        self.shuffle = shuffle
 
     def read(self, path):
         assert self.o is None
@@ -137,7 +138,15 @@ class Board(object):
 
         assert len(o) == n
 
-        np.random.shuffle(o)
+        if self.shuffle:
+            np.random.shuffle(o)
+        else:
+            o = sorted(o)
+            new_o = []
+            for i in range(self.h):
+                new_o += o[i::self.w]
+            o = new_o
+
         self.linear_grid = o
 
     def tostring(self):
@@ -169,6 +178,7 @@ def main():
     parser.add_argument('--player_n', default=20, type=int, help='Number of options each player should choose.')
     parser.add_argument('--board_n', default=15, type=int, help='Number of options kept. The rest are random.')
     parser.add_argument('--players', default='./players', type=str)
+    parser.add_argument('--shuffle', action='store_true')
     parser.add_argument('--test', action='store_true')
     parser.add_argument('--template', default='./templates/standard.txt', type=str)
     parser.add_argument('--options', default='./options.txt', type=str, help='A file containing all options.')
@@ -182,6 +192,7 @@ def main():
         options.players = './players'
         options.template = './templates/standard.txt'
         options.chosen = './chosen/_test.txt'
+        options.shuffle = False
 
     tm = TemplateManager()
     tm.read(options.template)
@@ -214,7 +225,7 @@ def main():
         local_seed = int(hashlib.sha1(name.encode()).hexdigest(), 16) % (10 ** 6)
         np.random.seed(options.seed + local_seed)
         path = os.path.join(options.players, path)
-        board = Board(global_o, player_n=options.player_n, board_n=options.board_n)
+        board = Board(global_o, player_n=options.player_n, board_n=options.board_n, shuffle=options.shuffle)
         board.read(path)
         board.add(chosen_o)
         board.make_grid()
@@ -242,8 +253,8 @@ def main():
 
     if options.test:
         assert player_info['caleb']['score']['score'] == 0
-        assert player_info['charlotte']['score']['score'] == 5
-        assert player_info['dolores']['score']['score'] == 10
+        assert player_info['charlotte']['score']['score'] == 10
+        assert player_info['dolores']['score']['score'] == 5
 
 
 if __name__ == '__main__':
