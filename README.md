@@ -81,24 +81,62 @@ $ python bingo.py --seed 149 --chosen ./chosen/ep1.txt
 
 seed: 149
 
-./players/dolores.txt (448179)
-|  17 |   7 |  23 |  21 |   9 |
-|  14 |  12 |   X |   6 |  20 | Found: 4
-|   0 |  10 |  ⓦ  |  18 |  33 |
-|   2 |  24 |  29 |   1 |  16 |
-|   X |   8 |   5 |  31 |  11 | Found: 3
+Found:
+  0. Bernard's secret revealed.
+  2. Host gets repaired.
+  3. There's a flashback.
+  7. A character gets redemption.
+ 10. Dolores turn a human into a host.
+ 11. Dolores hacks a machine (not another host).
+ 12. Dolores loses conciousness.
+ 13. Bernard switches personalities.
+ 14. Bernard resentfully fights someone.
+ 17. Charlotte pitches a business idea.
+ 19. Caleb takes a gig.
+ 21. Same scene plays out more than once.
+ 24. A human finds out another human is actually a host.
+ 27. A character has a fast wardrobe change.
+ 28. A character is seen in more than 3 outfits in one episode.
+ 29. Someone swims.
+ 30. A religious reference is made by a character (e.g. comparing hosts to higher beings).
+ 36. Scene from Park 3: Warworld.
+ 44. Francis's voice is heard.
+ 54. New gadget is introduced (such as the tool Ash used to prevent being tracked or the augmented reality glasses).
+ 55. A host drives a car or flying vehicle.
+ 56. A character references the special value of the Delos corporation.
+ 59. A human or host questions if a host is lying.
+ 60. Someone takes an implant (limbic sedative).
+ 61. There's fire.
+ 62. There's opera.
+ 63. A host talks about the "books".
+ 64. There's a callback to another sci-fi show: "I'm afraid I can't do that".
+ 65. There's a slow-mo aerial cinematic shot (a la Bladerunner).
+ 69. There's a hologram phone call.
 
-./players/charlotte.txt (443434)
-|   7 |   X |  18 |  14 |   8 | Found: 4
-|  13 |  23 |  29 |  32 |   X | Found: 3
-|  22 |  21 |  ⓦ  |   6 |  15 |
-|   1 |  31 |  33 |  16 |   9 |
-|   5 |  28 |   2 |  12 |  20 |
+caleb (918878)
+|  52 |  34 |  66 |   X |   X | Found: 2 13
+|  15 |   X |   X |   X |  16 | Found: 10 36 29
+|  22 |   X |  ⓦ  |   9 |   X | Found: 24 11
+|   X |  25 |  31 |  23 |   X | Found: 30 65
+|  35 |   X |   X |   X |   X | Found: 14 21 17 12
 
-./players/caleb.txt (970437)
-|  15 |  23 |  18 |   2 |   8 |
-|   7 |  14 |  24 |   5 |   1 |
-|  12 |  19 |  ⓦ  |  13 |  26 |
-|  30 |  33 |  16 |  11 |  28 |
-|  17 |   X |  31 |  10 |  27 | Found: 4
+Score = 0, You got lost in the maze!
+
+charlotte (421870)
+|   X |  49 |   X |   X |   X | Found: 3 12 36 2
+|   9 |   X |   X |   X |  42 | Found: 54 21 0
+|   X |  50 |  ⓦ  |   X |  35 | Found: 30 63
+|  32 |  22 |  31 |   8 |   4 |
+|   1 |  25 |  37 |   X |   X | Found: 65 24
+
+Score = 0, You got lost in the maze!
+
+dolores (908824)
+|  31 |   X |  32 |  35 |   X | Found: 62 21
+|   X |   8 |   1 |   X |  23 | Found: 65 64
+|  58 |   X |  ⓦ  |   X |   9 | Found: 13 7
+|   6 |  33 |  39 |   X |   X | Found: 12 24
+|   X |   5 |   X |   4 |  25 | Found: 2 3
+
+Score = 0, You got lost in the maze!
 ```
