@@ -18,7 +18,7 @@ NO Maeve escapes a persecutor.
 YES Charlotte pitches a business idea.
 ? Ford's ghost appears.
 YES Caleb takes a gig.
-? There's a four-legged animal (dog, elephant, horse, buffalo, etc.).
+YES There's a four-legged animal (dog, elephant, horse, buffalo, etc.). # Horse at Bernard's job.
 YES Same scene plays out more than once. # Caleb is on a loop.
 ? A host has a glitch.
 ? "That doesn't look like anything to me".
