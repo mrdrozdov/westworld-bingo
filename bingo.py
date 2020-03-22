@@ -247,7 +247,7 @@ def main():
         if len(chosen_o) > 0:
             log = 'Score = {}'.format(info['score']['score'])
             if len(info['score']['found']) > 0:
-                log += ', Found = {}'.format(info['score']['found'])
+                log += ', Patterns = {}'.format(info['score']['found'])
             else:
                 log += ', You got lost in the maze!'
             print(log)
