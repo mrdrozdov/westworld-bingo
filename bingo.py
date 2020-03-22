@@ -129,7 +129,7 @@ class Board(object):
         # Select random options.
         n = self.h * self.w
         missing = n - len(o)
-        new_o = np.random.choice(range(len(self.global_o)), missing + len(o))
+        new_o = np.random.choice(range(len(self.global_o)), missing + len(o), replace=False)
         for i in new_o:
             if len(o) == n:
                 break
@@ -137,6 +137,7 @@ class Board(object):
                 o.append(i)
 
         assert len(o) == n
+        assert len(set(o)) == len(o)
 
         if self.shuffle:
             np.random.shuffle(o)
@@ -146,6 +147,8 @@ class Board(object):
             for i in range(self.h):
                 new_o += o[i::self.w]
             o = new_o
+
+        assert len(set(o)) == len(o)
 
         self.linear_grid = o
 
@@ -242,9 +245,8 @@ def main():
         print('{} ({})'.format(info['name'], info['seed']))
         print(info['board'].tostring())
 
-        print('Total Found = {}'.format(len([x for x in info['board'].linear_grid if x in chosen_o])))
-
         if len(chosen_o) > 0:
+            print('Total Found = {}'.format(len([x for x in info['board'].linear_grid if x in chosen_o])))
             log = 'Score = {}'.format(info['score']['score'])
             if len(info['score']['found']) > 0:
                 log += ', Patterns = {}'.format(info['score']['found'])
@@ -254,9 +256,9 @@ def main():
             print('')
 
     if options.test:
-        assert player_info['caleb']['score']['score'] == 0
+        assert player_info['caleb']['score']['score'] == 5
         assert player_info['charlotte']['score']['score'] == 10
-        assert player_info['dolores']['score']['score'] == 5
+        assert player_info['dolores']['score']['score'] == 0
 
 
 if __name__ == '__main__':
