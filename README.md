@@ -8,7 +8,9 @@ It's like Bingo except you accumulate your points. Simple!
 
 *How do we handle ties?* If there's a tie, the person with the most squares filled wins. Otherwise, the person who earned the most squares earliest wins.
 
-*Which patterns are concerned?* Use the 8 patterns from here: https://i.pinimg.com/564x/f0/24/7d/f0247d6dd31023b9aa7f00c75c6a1834.jpg
+*Which patterns are considered?* Use the 8 patterns from below:
+
+<img src="bingo.jpg">
 
 1. Full Row
 2. Full Column
