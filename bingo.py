@@ -234,13 +234,15 @@ def main():
         info = collections.OrderedDict()
         info['name'] = name
         info['seed'] = local_seed
-        info['board'] = board.tostring()
+        info['board'] = board
         info['score'] = score
         player_info[name] = info
 
     for info in player_info.values():
         print('{} ({})'.format(info['name'], info['seed']))
-        print(info['board'])
+        print(info['board'].tostring())
+
+        print('Total Found = {}'.format(len([x for x in info['board'].linear_grid if x in chosen_o])))
 
         if len(chosen_o) > 0:
             log = 'Score = {}'.format(info['score']['score'])
