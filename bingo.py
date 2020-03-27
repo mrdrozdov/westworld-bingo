@@ -183,6 +183,7 @@ def main():
     parser.add_argument('--players', default='./players', type=str)
     parser.add_argument('--shuffle', action='store_true')
     parser.add_argument('--test', action='store_true')
+    parser.add_argument('--verbose', action='store_true')
     parser.add_argument('--template', default='./templates/standard.txt', type=str)
     parser.add_argument('--options', default='./options.txt', type=str, help='A file containing all options.')
     parser.add_argument('--chosen', default='./chosen/_empty.txt', type=str, help='A file containing all options that were chosen.')
@@ -213,6 +214,12 @@ def main():
 
     print('seed: {}'.format(options.seed))
     print('')
+
+    if options.verbose:
+        print('Squares:')
+        for i, desc in enumerate(global_o):
+            print('{:>3}. {}'.format(i, desc))
+        print('')
 
     if len(chosen_o) > 0:
         print('Found:')
