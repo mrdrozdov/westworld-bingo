@@ -178,6 +178,7 @@ class Board(object):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--seed', default=149, type=int)
+    parser.add_argument('--free', default=None, type=int)
     parser.add_argument('--player_n', default=20, type=int, help='Number of options each player should choose.')
     parser.add_argument('--board_n', default=15, type=int, help='Number of options kept. The rest are random.')
     parser.add_argument('--players', default='./players', type=str)
@@ -207,10 +208,18 @@ def main():
         for line in f:
             global_o.append(line.strip())
 
-    chosen_o = []
+    original_chosen_o = []
     with open(options.chosen) as f:
         for line in f:
-            chosen_o.append(int(line.split()[0]))
+            original_chosen_o.append(int(line.split()[0]))
+
+    chosen_o = original_chosen_o[:]
+
+    free_squares = None
+    if options.free is not None:
+        free_squares = sorted(np.random.choice(range(len(global_o)), options.free, replace=False).tolist())
+        for i in free_squares:
+            chosen_o.append(i)
 
     print('seed: {}'.format(options.seed))
     print('')
@@ -223,8 +232,16 @@ def main():
 
     if len(chosen_o) > 0:
         print('Found:')
-        for i in chosen_o:
-            print('{:>3}. {}'.format(i, global_o[i]))
+        for i in sorted(chosen_o):
+            if free_squares is not None:
+                if i in free_squares and i in original_chosen_o:
+                    is_free_indicator = '(free & found)'
+                elif i in free_squares:
+                    is_free_indicator = '(free)'
+
+            else:
+                is_free_indicator = ''
+            print('{:>3}. {} {}'.format(i, global_o[i], is_free_indicator))
         print('')
 
     player_info = collections.OrderedDict()
