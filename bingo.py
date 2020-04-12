@@ -199,6 +199,8 @@ def main():
         options.chosen = './chosen/_test.txt'
         options.shuffle = False
 
+    np.random.seed(options.seed)
+
     tm = TemplateManager()
     tm.read(options.template)
     # tm.print()
@@ -233,14 +235,12 @@ def main():
     if len(chosen_o) > 0:
         print('Found:')
         for i in sorted(chosen_o):
+            is_free_indicator = ''
             if free_squares is not None:
                 if i in free_squares and i in original_chosen_o:
                     is_free_indicator = '(free & found)'
                 elif i in free_squares:
                     is_free_indicator = '(free)'
-
-            else:
-                is_free_indicator = ''
             print('{:>3}. {} {}'.format(i, global_o[i], is_free_indicator))
         print('')
 
