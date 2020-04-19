@@ -265,12 +265,15 @@ def main():
         info['score'] = score
         player_info[name] = info
 
+    short_summary = []
+
     for info in player_info.values():
         print('{} ({})'.format(info['name'], info['seed']))
         print(info['board'].tostring())
 
         if len(chosen_o) > 0:
-            print('Total Found = {}'.format(len([x for x in info['board'].linear_grid if x in chosen_o])))
+            squares = len([x for x in info['board'].linear_grid if x in chosen_o])
+            print('Total Found = {}'.format(squares))
             log = 'Score = {}'.format(info['score']['score'])
             if len(info['score']['found']) > 0:
                 log += ', Patterns = {}'.format(info['score']['found'])
@@ -278,6 +281,11 @@ def main():
                 log += ', You got lost in the maze!'
             print(log)
             print('')
+
+            short_summary.append((info['name'], info['score']['score'], squares))
+
+    for name, score, squares in short_summary:
+        print(name, score, squares)
 
     if options.test:
         assert player_info['caleb']['score']['score'] == 5
